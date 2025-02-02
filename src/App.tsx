@@ -1,6 +1,7 @@
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import Like from "./components/Like";
 import { useState } from "react";
 
 function App() {
@@ -8,11 +9,15 @@ function App() {
 
   return (
     <div>
-      {alertVisible && (
-        <Alert onClose={() => setAlertVisibility(false)}>Hey Peeps!</Alert>
-      )}
-      <Button onClick={() => setAlertVisibility(true)}>Click Me!</Button>
+      <Like onClick={() => console.log("clicked")} />
     </div>
+
+    // <div>
+    //   {alertVisible && (
+    //     <Alert onClose={() => setAlertVisibility(false)}>Hey Peeps!</Alert>
+    //   )}
+    //   <Button onClick={() => setAlertVisibility(true)}>Click Me!</Button>
+    // </div>
   );
   // let cities = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
   // const handleSelectCity = (city: string) => {
